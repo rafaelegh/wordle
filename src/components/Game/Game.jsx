@@ -56,10 +56,8 @@ function Game() {
 
   
   const keyHandler = (letterValue) => {
-    console.log('letterValue: ', letterValue)
     setLetter(letterValue);
     setClicked(clicked + 1);
-    console.log('keyhandler', letter)
   };
   
   useEffect(() => {

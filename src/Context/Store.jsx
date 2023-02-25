@@ -35,7 +35,6 @@ export default function Store({children}) {
         }
      }, [reset])
 
-    console.log(correct, _correct);
 
     const contextValue = React.useMemo(() => {
         return {

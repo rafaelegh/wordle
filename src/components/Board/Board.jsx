@@ -14,7 +14,6 @@ function Board(props) {
       console.log("Game ended!");
     } else {
       if (props.clicks !== 0) {
-        console.log(props.letter)
         if (props.letter === "DEL") {
           setCol(col === 0 ? 0 : col - 1);
           setBoard((prevBoard) => {
@@ -48,7 +47,6 @@ function Board(props) {
                     } else if (correct.includes(prevBoard[row][i][0]))
                       prevBoard[row][i][1] = "E";
                     else prevBoard[row][i][1] = "N";
-                    console.log(row)
                     setRow(row + 1);
                     setCol(0);
                     setLetters((prev) => {
@@ -66,11 +64,7 @@ function Board(props) {
                     setOpenStatitics(true);
                   }
                   if (row === 4) {
-                    setGames(prevGames => {
-                      console.log('prevGames: ', prevGames)
-                      return prevGames + 1
-                    }
-                    );
+                    setGames(prevGames => prevGames + 1);
                     setLost(true);
                     setTimeout(() => {
                       setMessage(`It was ${correct}`);
